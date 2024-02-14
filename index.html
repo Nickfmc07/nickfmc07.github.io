@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nícolas Chagas - Página Inicial</title>
+    <link rel="shortcut icon" href="imgs/minhaFoto.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8efa1554ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+    <nav>
+        <a class="links-nav" href="#inicio">
+            <i class="fa-solid fa-house icones"></i>
+            <label>Início</label>
+        </a>
+        <a class="links-nav" href="#sobre-mim">
+            <i class="fa-solid fa-user icones"></i>
+            <label>Sobre mim</label>
+        </a>
+        <a class="links-nav" href="#sobre-a-pagina">
+            <i class="fa-solid fa-computer icones"></i>
+            <label>Sobre a página</label>
+        </a>
+
+
+            <label id="switch">
+                <button id="alternar-tema"></button>
+                <div id="bola"></div>
+                <i id="sol" class="fa-solid fa-sun"></i>
+                <i id="lua" class="fa-solid fa-moon"></i>
+            </label>
+    </nav>
+
+
+    <header  id="inicio">
+        <a href="index.html"><img src="imgs/minhaFoto.png" id="icone"></a>
+        <a href="index.html"><h1>NÍCOLAS CHAGAS</h1></a>
+
+    </header>
+
+
+        <main>
+            <h2>Início</h2>
+            <img src="imgs/cefet-campus-II.png" alt="Uma bela foto do Campus II." class="imgsLaterais">
+            <p>
+                Bem vindo! Meu nome é Nícolas Chagas, aluno do Cefet-MG. 
+                Construí este site visando me apresentar para a vaga do projeto de extensão "Desenvolvimento de um Sistema para Gestão de Propriedade Intelectual para Instituições de Ciência e Tecnologia". 
+                Nele, constam as seguintes seções que podem ser acessadas pelo menu lateral:
+            </p>
+            <ul>
+                <li>Início, onde é feita uma breve introdução;</li>
+                <li>Sobre mim: que contém uma apresentação pessoal mais detalhada, descrevendo minhas atividades atuais e os motivos pelos tenho interesse em fazer parte do projeto, além de um breve historico acadêmico;</li>
+                <li>Sobre a página: uma sessão dedicada a expor detalhes sobre a construção do site, uso de js, e outros recursos</li>
+            </ul>
+            <h2 id="sobre-mim">Sobre mim</h2>
+            <img src="imgs/cefet-campus-II.png" alt="Uma bela foto do Campus II." class="imgsLaterais">
+            <P>
+                Olá! Meu nome é Nícolas e tenho 16 anos.
+                Sempre tive interesse em áreas como Matemática e Informática.
+                 Participei de olimpíadas nas duas áreas (como a Canguru e
+                 a OBI) e conquistei algumas medalhas de matemática. 
+                 Já fiz curso de robótica com legos e gostava de usar Scratch2, o que me 
+                 ajudou a compreender melhor lógica de programação.
+                 Fora do ambiente acadêmico você pode me encontrar ouvindo música,
+                 em especial rock, e tocando guitarra. 
+            </P>
+            <h3>Por que quer fazer parte?</h3>
+            <p>
+                Vejo no projeto uma oportunidade de ganhar experiência com a
+                 dinâmica de um time que visa implementar e fazer manutenção
+                  evolutiva de um sistema de gestão de propriedade
+                   intelectual. Além de aprender Python, uma linguagem de
+                    sólida relevância em projetos de back-end e que seria
+                     fundamental para meu desenvolvimento profissional.  
+                     Participando ativamente do projeto, eu poderia 
+                     desenvolver minhas habilidades técnicas, aprender com 
+                     orientadores e colegas mais experientes e ganhar 
+                     experiência colaborando com um time, sendo assim, 
+                     considero que ingressar seria uma excelente oportunidade
+                      e por isso me candidatei.
+            </p>
+            <h3>Dados pessoais</h3>
+            <ul>
+                <li>Nome completo: Nícolas Francisco Martins Chagas;</li>
+                <li>Contato: nicolaschagas5588@gmail.com;</li>
+                <li>Curso: 2º ano de Informática;</li>
+            </ul>
+            <h2 id="sobre-a-pagina">Sobre a página</h2>
+                <h3>Temas</h3>
+                <p>
+                    A página conta com um switch que aplica individualmente um
+                    tema claro ou escuro para cada determinado elemento, Assim 
+                    como faz o uso da API matchMedia() para detectar o tema padrão
+                    do usuário. 
+                </p>
+                <h3>Ícones</h3>
+                <p>
+                    Os ícones <i class="fa-solid fa-house icones"></i>, <i class="fa-solid fa-user icones"></i>, <i class="fa-solid fa-computer icones"></i>,
+                    usei do site Fontawesome, e podem ser manipulados como uma fonte por CSS.
+                </p>
+        </main>
+
+
+        <footer>
+            <div>
+            <h3>Atribuição de Papéis de Parede</h3>
+                <li><a href="https://pt.vecteezy.com/vetor-gratis/circuito">Circuito Vetores por Vecteezy</a></li>
+                <li><a href="https://deepai.org/machine-learning-model/torch-srgan">Super Resolution (usado para aumentar a resolução do fundo)</a></li>
+            </div>
+            <div>
+                <h3>Atribuição dos ícones</h3>
+                <ul>
+                    <li><a href="https://fontawesome.com/icons?d=gallery&m=free">FontAwesome</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="meuJs.js"></script>
+</body>
+</html>
