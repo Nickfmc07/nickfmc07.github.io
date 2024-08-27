@@ -6,7 +6,7 @@ body, html {
 
 body {
     display: grid;
-    grid-template-rows: 13vh auto 11vh;
+    grid-template-rows: 13vh auto auto;
     height: 100vh;
     background-image: url("imgs/fundo-dark.jpg");
     background-repeat: repeat;
