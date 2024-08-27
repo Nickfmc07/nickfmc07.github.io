@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 13vh auto 11vh;
+    height: 100vh;
+    background-image: url("imgs/fundo-dark.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+header {
+    grid-row: 1;
+
+    margin-left: 5vw;
+
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+main {
+    margin-left: 10vw;
+    margin-right: 5vw;
+    padding-bottom: 1vh;
+    border-radius: 1vw 1vw 0 0;
+}
+
+footer {
+    grid-row: 3;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+
+    padding-top: 1vh;
+    padding-left: 3vw;
+    margin-left: 10vw;
+    margin-right: 5vw;
+}
+
+#icone {
+    height: 10vh;
+
+    box-shadow: rgba(255, 255, 255, 0.452) 0rem 0rem 0.3rem;
+    border-color: rgb(0, 247, 255);
+    border-style: solid;
+    border-width: 0.3vh;
+    border-radius: 1vw;
+    background: linear-gradient(90deg, rgb(22, 112, 139) 0%, rgb(0, 183, 255) 35%);
+}
+
+h1 {
+    font-family: 'Montserrat';
+    color:white;
+    text-shadow: 2px 2px 5px rgb(0, 247, 255);
+    margin-left: 2vw;
+}
+
+h2 {
+    display: inline-block;
+    width: 75vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    padding-bottom: 0.1em;
+
+    font-family: sans-serif;
+    font-weight: 300;
+    
+    border-color: inherit;
+    border-bottom: 0.3vh solid;
+}
+
+main p, main li {
+    margin: 0 40vw 1vh 5vw;
+
+    text-align: justify;
+    text-indent: 0.5em;
+    line-height: calc(24/14);
+}
+
+main h3 {
+    margin-left: 6vw;
+}
+
+.imgsLaterais {
+    float: right;
+    height: 30vw;
+    width: 30vw;
+    margin-right: 5vw;
+}
+
+a {
+    color: inherit;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: rgb(0, 188, 212);
+}
+
+li {
+    margin-top: -1vh;
+    margin-bottom: 1vh;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 1vh;
+}
+
+/*********************************** Temas ***********************************/
+.tema-escuro {
+    color: rgb(220, 220, 220);
+    background-color: #13131a;
+    border-color: rgb(220, 220, 220);
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.tema-claro {
+    background-color: rgb(220, 220, 220);
+    color:black;
+    border-color: black;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.box-shadow-claro {
+    box-shadow: rgba(0, 188, 212) 0rem 0rem 0.2rem;
+}
+
+.box-shadow-escuro {
+    box-shadow: rgba(255, 255, 255, 0.452) 0rem 0rem 0.2rem;
+}
+
+.box-shadow-claro2 { /*só um boxshadow com mais spread para as imagens*/
+    box-shadow: rgba(0, 188, 212) 0rem 0rem 0.3rem;
+}
+
+.box-shadow-escuro2 { /*só um boxshadow com mais spread para as imagens*/
+    box-shadow: rgba(255, 255, 255, 0.452) 0rem 0rem 0.3rem;
+}
+
+.icones-claros {
+    color: rgb(220, 220, 220);
+}
+
+.icones-escuros {
+    color: #1f1f24;
+}
+
+footer.tema-escuro h3, footer.tema-escuro li {
+    color: rgba(220, 220, 220, 0.685);
+}
+
+footer.tema-claro h3, footer.tema-claro li {
+    color: #36363d;
+}
+
+/************************************* Switch para temas *******************************************/
+
+button {
+    display: none;
+}
+
+.switch {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    place-content: center space-evenly;
+
+    height: 1.7vw;
+    width: 3.4vw;
+
+    border: 0.5vh solid white;
+    font-size: 1.1vw;
+    border-radius: 3.4vw;
+}
+
+.luas {
+    display: block;
+    transition: opacity 0.3s;
+    color: #00bcd4;
+}
+
+.sois {
+    transition: opacity 0.3s;
+    color: rgb(255, 187, 0);
+}
+
+.bola {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.1vw;
+    width: 1.1vw;
+    transition: left 0.3s;
+
+    background-color: white;
+    border-radius: 50%;
+}
+
+.checked {
+    opacity: 0;
+}
+
+.bola-unchecked {
+    left: 0.2vw;
+
+    border: 0.2vw solid #00bcd4;
+}
+
+.bola-checked {
+    left: 1.8vw;
+
+    border: 0.2vw solid rgb(255, 187, 0);
+}
+
+#switch-mobile {
+    display: none;
+}
+
+/************************************** Nav para telas maiores *************************************/
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 0;
+    height: 100vh;
+    width: 4vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5VW;
+ 
+    background: linear-gradient(90deg, rgb(22, 112, 139) 5%, rgb(1, 153, 212) 35%, rgb(0, 183, 255) 70%);
+    border-right: 0.01em solid rgb(220, 220, 220);
+    box-shadow: rgba(255, 255, 255, 0.452) 0rem 0rem 0.3rem;
+}
+
+.links-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+nav .icones {
+    font-size: 3.5vw;
+}
+
+nav a label, .icones {
+    color: inherit;
+}
+
+nav a:hover .icones, nav a:hover label {
+    color: yellow;
+}
+
+/************************************ Estilização para telas menores *******************************************/
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-rows: 10vh auto auto;
+    }
+
+    header {
+        height: 10vh;
+        padding-left: 2vw;
+    }
+
+    main {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        padding: 0;
+        text-align: center;
+    }
+
+    main p {
+        margin-right: 5vw;
+
+        line-height: 1.4;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    ul {
+        margin: 0;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    #icone {
+        height: 6vh;
+    }
+
+    main li {
+        margin: 0;
+        margin-right: 5vw;
+    }
+
+    .imgsLaterais {
+        margin: 2vh 0 2vh 0;
+        float: none;
+        height: 50vw;
+        width: 50vw;
+        display: inline;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .switch {
+        position: absolute;
+        left: 60vw;
+        margin-left: 25vw;
+        height: 5vw;
+        width: 10vw;
+    }
+
+    .bola {
+        height: 3.2vw;
+        width: 3.2vw;
+        border-width: 0.6vw;
+    }
+
+    .bola-checked {
+        left: 4.8vw;
+    }
+
+    .bola-unchecked {
+        left: 1vw;
+    }
+    
+    header i {
+        font-size: 3em;
+    }
+
+    #switch-mobile {
+        display: flex;
+    }
+}
+
+/***********************************tamanho das fontes************************************/
+body {
+    font-size: 18px; 
+}
+
+h1 {
+    font-size: 2.5em; 
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p, a, li {
+    font-size: 1em; 
+}
+
+nav a {
+    font-size: 0.8em;
+}
+
+footer {
+    font-size: 0.88em;
+}
+
+
+@media screen and (min-width: 2560px) {
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p, li {
+        font-size: 1.3em;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    p, nav a, li {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.88em;
+    }
+}
