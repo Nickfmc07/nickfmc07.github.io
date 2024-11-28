@@ -131,46 +131,136 @@
 </html>
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Desejos do Nico</title>
+    <title>Lista de Desejos</title>
     <style>
+        /* Global Styles */
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            background-color: #f9f9f9;
         }
-        img {
-            width: 50vw;
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
         }
-        a {
-            margin-left: 25vw;
+
+        /* Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
         }
-        a :hover {
-            margin-top: -5px;
-            margin-left: -5px;
+
+        /* Card Style */
+        .item-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 15px;
+            overflow: hidden;
         }
-        p {
-            margin-left: 25vw;
+
+        .item-card img {
+            width: 100%;
+            height: auto;
         }
-        .hs {
-            margin-left: 0;
+
+        .item-content {
+            padding: 15px;
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            font-size: 1em;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            width: 95%;
+            padding: 10px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .item-card {
+                width: 95%;
+            }
+
+            .btn {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Lista de desejos do Nícolas</h1>
-    <h2>Opção 1: HeadSet</h2>
-    <p>Opções de HeadSets:
-        <a class="hs" href="https://www.amazon.com.br/Headset-Gamer-Conex%C3%A3o-%C3%9Anica-Usb/dp/B0CX5M5WMC/ref=sr_1_26?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=302G3DF5H4QS2&dib=eyJ2IjoiMSJ9.yJuewNbDtR0Pbk-GrmZNOHTie8x9VPVMMUXME4lLPGWAV-UzN4SiHeYmxxWmRw5BBRZ1fezZSGNnRlrB-5ksfyXfs0-JckQGRQficgQNKOuZGRK7QFc4BNJZiL6ELIC0EMZFHGW4HMA0XjmC2gCPuvyJpDYg0_S-2pmN0_n5a5blGPcAbDhavD2VCmHHhy1PnVCsP0PYkdH6ilwJGB8xZ0MvybaWIdZaVTrPu3Fy3UhEnQEGCLEhgrQ8KVdVr6DIHjISQhh4AwjhtzzMgSAoH1JkU7AWrONf5ssz06a76cE.7w8oEsgYDfGSkY8pp3eForrC5tLXkfeO5wmK6Wcnhgg&dib_tag=se&keywords=headset&qid=1732754199&refinements=p_36%3A9000-27500&rnid=16254006011&sprefix=headset%2Caps%2C623&sr=8-26&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Hp; </a>
-        <a class="hs" href="https://www.amazon.com.br/Headset-H2-Fortrek-Microfones-Ouvido/dp/B07FJPLFKM/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1WP8DRO781TOH&dib=eyJ2IjoiMSJ9.bJoU3AEyDLM20K25RAFzBLsBXCPHRhQiqJd9HCHVa1_RDa2wqvQhtVFzbvcXKID0nJ6LWbsOaQ4uUmzy0pSMsWSsSCLdGZCfRxOizC-oKwngYw8IKgINq4Tfu4IO07pxOak8whLGOM9Ays6SLDbuKsLu2SxQgcuvegoxpLVZgSUP8-aE7sU0qIcx8RuybW0yZRzSefWq6gRXHSXtQIyTHiLVZWKAJr7dhZY66EH4uave1aF-FUUkOzsYHL0kJOt8FuVrPL8_XEocNRY2piOz4tMArQxd6lK89rxjZfFbeEs.IpjAjGapM_iexb2XJcMGl8xiFD44j2sya-WfJJUTEZo&dib_tag=se&keywords=fortrek+headset&qid=1732761184&s=computers&sprefix=fortrek+headse%2Ccomputers%2C210&sr=1-4&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Fortrek pro H2; </a>
-        <a href="https://www.kabum.com.br/produto/128629/headset-gamer-fortrek-holt-rgb-drives-50mm-70552">Fortrek Holt 70552</a>
-    </p>
-    <a href="https://www.amazon.com.br/Ouvido-Headset-Compat%C3%ADvel-Computador-Celular/dp/B0DBB7YR21/ref=sr_1_35?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=302G3DF5H4QS2&dib=eyJ2IjoiMSJ9.yJuewNbDtR0Pbk-GrmZNOHTie8x9VPVMMUXME4lLPGWAV-UzN4SiHeYmxxWmRw5BBRZ1fezZSGNnRlrB-5ksfyXfs0-JckQGRQficgQNKOuZGRK7QFc4BNJZiL6ELIC0EMZFHGW4HMA0XjmC2gCPuvyJpDYg0_S-2pmN0_n5a5blGPcAbDhavD2VCmHHhy1PnVCsP0PYkdH6ilwJGB8xZ0MvybaWIdZaVTrPu3Fy3UhEnQEGCLEhgrQ8KVdVr6DIHjISQhh4AwjhtzzMgSAoH1JkU7AWrONf5ssz06a76cE.7w8oEsgYDfGSkY8pp3eForrC5tLXkfeO5wmK6Wcnhgg&dib_tag=se&keywords=headset&qid=1732754199&refinements=p_36%3A9000-27500&rnid=16254006011&sprefix=headset%2Caps%2C623&sr=8-35&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"><img src="https://m.media-amazon.com/images/I/61hj6TZ6FwL._AC_SY450_.jpg" alt="Headset com fio para computador"></a>
-    <a href="https://www.amazon.com.br/Ouvido-Headset-Compat%C3%ADvel-Computador-Celular/dp/B0DBB7YR21/ref=sr_1_35?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=302G3DF5H4QS2&dib=eyJ2IjoiMSJ9.yJuewNbDtR0Pbk-GrmZNOHTie8x9VPVMMUXME4lLPGWAV-UzN4SiHeYmxxWmRw5BBRZ1fezZSGNnRlrB-5ksfyXfs0-JckQGRQficgQNKOuZGRK7QFc4BNJZiL6ELIC0EMZFHGW4HMA0XjmC2gCPuvyJpDYg0_S-2pmN0_n5a5blGPcAbDhavD2VCmHHhy1PnVCsP0PYkdH6ilwJGB8xZ0MvybaWIdZaVTrPu3Fy3UhEnQEGCLEhgrQ8KVdVr6DIHjISQhh4AwjhtzzMgSAoH1JkU7AWrONf5ssz06a76cE.7w8oEsgYDfGSkY8pp3eForrC5tLXkfeO5wmK6Wcnhgg&dib_tag=se&keywords=headset&qid=1732754199&refinements=p_36%3A9000-27500&rnid=16254006011&sprefix=headset%2Caps%2C623&sr=8-35&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Link do HeadSet</a>
-    <h2>Opcão 2: Camisa Liverpool da Nike</h2>
-        <a href="https://www.nike.com.br/camiseta-nike-liverpool-masculina-021945.html?cor=ID"><img id="c1" src="https://imgnike-a.akamaihd.net/360x360/021945IDA2.jpg" alt="camisa nike"></a>
-        <a href="https://www.nike.com.br/camiseta-nike-liverpool-masculina-021945.html?cor=ID">Link da Camisa</a>
+    <h1>Lista de Desejos do Nícolas</h1>
+    <div class="container">
+        <!-- Item 1 -->
+        <div class="item-card">
+            <img src="https://images.kabum.com.br/produtos/fotos/128629/headset-gamer-fortrek-holt-rgb-drives-50mm-70552_1601300368_m.jpg" alt="Imagem do Produto">
+            <div class="item-content">
+                <p>⭐ Favorito!!</p>
+                <p class="item-title">Headset Gamer Fortrek Holt</p>
+                <p class="item-price">R$ 84,99</p>
+                <a class="btn" href="https://www.kabum.com.br/produto/128629/headset-gamer-fortrek-holt-rgb-drives-50mm-70552" target="_blank">Ir para o site</a>
+            </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="item-card">
+            <img src="https://imgnike-a.akamaihd.net/768x768/021945IDA2.jpg" alt="Imagem do Produto">
+            <div class="item-content">
+                <p class="item-title">Camiseta Nike Liverpool Tamanho M</p>
+                <p class="item-price">R$ 94,99</p>
+                <a class="btn" href="https://www.nike.com.br/camiseta-nike-liverpool-masculina-021945.html?cor=ID" target="_blank">Ir para o site</a>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="item-card">
+            <img src="https://imgnike-a.akamaihd.net/768x768/010895IDA11.jpg" alt="Imagem do Produto">
+            <div class="item-content">
+                <p class="item-title">Camiseta Nike SB tamanho M</p>
+                <p class="item-price">R$ 75,99</p>
+                <a class="btn" href="https://www.nike.com.br/camiseta-nike-sb-masculina-010895.html?cor=ID" target="_blank">Ir para o site</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
