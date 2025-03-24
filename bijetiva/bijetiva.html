@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>César</h2>
+
+        <div class="switch-container">
+            <span>Cifrar</span>
+            <label class="switch">
+                <input type="checkbox" onclick="altC()" id="decryptModeC">
+                <span class="slider"></span>
+            </label>
+            <span>Decodificar</span>
+        </div>
+
+        <label for="keyC">🗝️Chave</label>
+        <input id="keyC" type="number" onkeyup="updateCells()">
+
+        <label for="plainTextC">🔠Texto simples</label>
+        <input id="plainTextC" type="text" onkeyup="executeC()">
+
+        <label for="cipherTextC">🔣Texto cifrado</label>
+        <input id="cipherTextC" type="text" disabled onkeyup="executeC()">
+
+        <!--button type="button" onclick="executeC()">Executar</button-->
+    </form>
+
+    <div class="container">
+        <span class="chaves1">{</span>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+        <span class="chaves1">}</span>
+        <p> </p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p> </p>
+        <span class="chaves2">{</span>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+        <span class="chaves2">}</span>
+    </div>
+
+    <!--div class="containerVertical">
+        <div class="column">
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+            <input type="text" class="staticCell" disabled>
+        </div>
+        <div class="column">
+            <p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p><p>→</p>
+        </div>
+        <div class="column">
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+            <input type="text" class="cell" disabled>
+        </div>
+    </div-->
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+    Dicionário:
+    - alt: alternar cifrar/decodificar
+    - cipher: texto cifrado
+    - plain: texto simples
+    - C: relativo à cifra de César
+-->
