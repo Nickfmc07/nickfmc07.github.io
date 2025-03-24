@@ -17,7 +17,7 @@ form {
     background-color: #13131a;
     margin-bottom: 3vh;
     height: fit-content;
-    padding: 0 3vh 3vh 3vh;
+    padding: 0 3vh 1vh 3vh;
     border-radius: 6px;
     border: 1px solid #333;
     float: left;
@@ -274,4 +274,19 @@ input:checked + .slider:before {
 }
 h3 {
     margin: 2vh 0 0 1vh;
+}
+#chave:disabled{
+    grid-row: 1;
+    padding: 0;
+    max-width: 140px;
+    height: 20px;
+    align-items: center;
+    justify-items: left;
+    border: none;
+    background-color: #13131a;
+    font-size: inherit;
+    opacity: 1;
+}
+form p {
+    margin: 1vh 0 0 0;
 }
