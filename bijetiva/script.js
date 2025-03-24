@@ -4,6 +4,9 @@ const keyCEl = document.getElementById("keyC")
 const decryptModeCEl = document.getElementById("decryptModeC")
 const staticCells = document.querySelectorAll(".staticCell")
 const cells = document.querySelectorAll(".cell")
+const infoBtnEl = document.getElementById("info")
+const floatingNotes = document.querySelectorAll(".note")
+const notes = document.querySelectorAll(".nota")
 
 function altC() {
     if (plainTextCEl.disabled) {
@@ -19,7 +22,7 @@ function altC() {
 }   // caso eu não use o botão e recalcule a caixa de texto, eu preciso executar a função para que a caixa de texto contenha o resultado. E isso é mais custoso do que simplesmente não apagar a caixa como eu fiz no caso do botão. Mas, pela versatilidade de poder mudar entre as duas formas, estou mantendo a versão que recalcula como comentário.
 
 function encryptC(key, plainText) {
-    if (key == 0 || key == NaN) return plainText
+    if (key == 0 || isNaN(key)) return plainText
     let encryptedText = ""
     for(let i = 0; i < plainText.length; i++) {
         let c = plainText[i]
@@ -34,7 +37,7 @@ function encryptC(key, plainText) {
 }
 
 function decryptC(key, cipherText) {
-    if (key == 0 || key == NaN) return cipherText
+    if (key == 0 || isNaN(key)) return cipherText
     let decryptedText = ""
     for(let i = 0; i < cipherText.length; i++) {
         let c = cipherText[i]
@@ -49,7 +52,7 @@ function decryptC(key, cipherText) {
 }
 
 function executeC() {
-    const key = parseInt(keyCEl.value);
+    let key = parseInt(keyCEl.value)
     if (decryptModeCEl.checked) plainTextCEl.value =
     decryptC(key, cipherTextCEl.value);
     else cipherTextCEl.value =
@@ -71,3 +74,14 @@ function updateCells() {
         cells[i].value = String.fromCharCode(newCharCode);
     }
 } updateCells();
+
+function toggleInfo() {
+    infoBtnEl.classList.toggle("deactivated")
+    infoBtnEl.classList.toggle("activated")
+    floatingNotes.forEach((note, index) => {
+        note.classList.toggle("hidden")
+    });
+    notes.forEach((note, index) => {
+        note.classList.toggle("hidden")
+    });
+}
