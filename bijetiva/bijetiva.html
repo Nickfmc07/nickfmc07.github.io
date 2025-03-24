@@ -7,8 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="note-point">
+        <aside id="n1" class="note">
+            <h3>Definição da Função:</h3>
+            <p>Cada letra do alfabeto original é mapeada para exatamente uma letra no alfabeto cifrado, de acordo com a chave.</p>
+            <h3>Reversibilidade</h3>
+            <p>Como a função é bijetiva, é possível decodificar qualquer mensagem sem perda de informação.</p>
+        </aside>
+    </div>
     <form>
-        <h2>César</h2>
+        <h2>Cifra de César</h2>
 
         <div class="switch-container">
             <span>Cifrar</span>
@@ -20,7 +28,7 @@
         </div>
 
         <label for="keyC">🗝️Chave</label>
-        <input id="keyC" type="number" onkeyup="updateCells()" onblur="executeC()">
+        <input id="keyC" type="number" onkeyup="updateCells()">
 
         <label for="plainTextC">🔠Texto simples</label>
         <input id="plainTextC" type="text" onkeyup="executeC()">
@@ -30,9 +38,8 @@
 
         <!--button type="button" onclick="executeC()">Executar</button-->
     </form>
-
     <div class="container">
-        <span class="chaves1">{</span>
+        <span class="chaves1">🔠 {</span>
             <input type="text" class="staticCell" disabled>
             <input type="text" class="staticCell" disabled>
             <input type="text" class="staticCell" disabled>
@@ -59,9 +66,9 @@
             <input type="text" class="staticCell" disabled>
             <input type="text" class="staticCell" disabled>
             <input type="text" class="staticCell" disabled>
-        <span class="chaves1">}</span>
+        <span id="c1" class="chaves1">}</span>
         <p> </p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p>↓</p><p> </p>
-        <span class="chaves2">{</span>
+        <span class="chaves2">🔣 {</span>
             <input type="text" class="cell" disabled>
             <input type="text" class="cell" disabled>
             <input type="text" class="cell" disabled>
@@ -88,10 +95,17 @@
             <input type="text" class="cell" disabled>
             <input type="text" class="cell" disabled>
             <input type="text" class="cell" disabled>
-        <span class="chaves2">}</span>
+        <span id="c2" class="chaves2">}</span>
     </div>
 
-    <!--div class="containerVertical">
+    <div class="nota">
+        <h3>Injetividade</h3>
+        <p>Nenhuma letra cifrada se repete para diferentes letras originais (ou seja, não há colisões).</p>
+        <h3>Sobrejetividade</h3>
+        <p></p>Toda letra do alfabeto cifrado é atingida por alguma letra do original.</p>
+    </div>
+
+    <!--div class="containerVertical"> DEACTIVATED (Não está funcionando)
         <div class="column">
             <input type="text" class="staticCell" disabled>
             <input type="text" class="staticCell" disabled>
@@ -140,6 +154,7 @@
         </div>
     </div-->
 
+    <button onclick="toggleInfo()" id="info" class="activated">i</button>
     <script src="script.js"></script>
 </body>
 </html>
