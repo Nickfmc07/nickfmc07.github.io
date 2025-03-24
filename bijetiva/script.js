@@ -7,6 +7,7 @@ const cells = document.querySelectorAll(".cell")
 const infoBtnEl = document.getElementById("info")
 const floatingNotes = document.querySelectorAll(".note")
 const notes = document.querySelectorAll(".nota")
+const keyDisplayEl = document.getElementById("chave")
 
 function altC() {
     if (plainTextCEl.disabled) {
@@ -73,6 +74,7 @@ function updateCells() {
         let newCharCode = (startCharCode - 65 + i + key) % 26 + 65
         cells[i].value = String.fromCharCode(newCharCode);
     }
+    keyDisplayEl.value = key
 } updateCells();
 
 function toggleInfo() {
