@@ -19,7 +19,7 @@ function altC() {
 }   // caso eu não use o botão e recalcule a caixa de texto, eu preciso executar a função para que a caixa de texto contenha o resultado. E isso é mais custoso do que simplesmente não apagar a caixa como eu fiz no caso do botão. Mas, pela versatilidade de poder mudar entre as duas formas, estou mantendo a versão que recalcula como comentário.
 
 function encryptC(key, plainText) {
-    if (key == 0 || key == null) return plainText
+    if (key == 0 || key == NaN) return plainText
     let encryptedText = ""
     for(let i = 0; i < plainText.length; i++) {
         let c = plainText[i]
@@ -34,7 +34,7 @@ function encryptC(key, plainText) {
 }
 
 function decryptC(key, cipherText) {
-    if (key == 0 || key == null) return cipherText
+    if (key == 0 || key == NaN) return cipherText
     let decryptedText = ""
     for(let i = 0; i < cipherText.length; i++) {
         let c = cipherText[i]
