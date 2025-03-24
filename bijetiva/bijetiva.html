@@ -20,7 +20,7 @@
         </div>
 
         <label for="keyC">🗝️Chave</label>
-        <input id="keyC" type="number" onkeyup="updateCells()">
+        <input id="keyC" type="number" onkeyup="updateCells()" onblur="executeC()">
 
         <label for="plainTextC">🔠Texto simples</label>
         <input id="plainTextC" type="text" onkeyup="executeC()">
